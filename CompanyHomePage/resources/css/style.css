@@ -1,32 +1,40 @@
 body, html{
 	color: white;
 	width: 100%;
-	min-height: 100%;
+	height: 100%;
 	margin: 0;
 	padding: 0;
+	overflow: scroll;
+	font-family: 'Mulish', sans-serif;
 }
 
 main{
 	padding: 260px 13% 0;
+	height: auto;
+	z-index: -1;
+	background-image: linear-gradient(rgba(0,0,0,.20), rgba(0,0,0,.85), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1));
+	background-size: cover;
+}
+
+@media screen and (max-width: 1400px) {
+  main{
+    background-image: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1));
+  }
 }
 
 
-.background-img{
+.background{
+	background-image: url(../images/background.jpg);
 	position: fixed;
 	z-index: -2;
-	max-width: 100%;
-	min-height: 100%;
-}
-.gradient-bg{
-	position: absolute;
 	width: 100%;
-	height: 2350px;
-	z-index: -1;
-	background-image: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,1));
+	min-width: 100%;
+	min-height: 100%;
 	background-size: cover;
 }
 
 h1{
+	font-family: dunbar-low, sans-serif;
 	font-size: 64px;
 	margin: 0px;
 }
@@ -38,6 +46,7 @@ h2{
 
 p{
 	margin-bottom: 0;
+	font-size: 18px;
 }
 
 a:visited{
@@ -47,6 +56,7 @@ a:visited{
 li{
 	display: inline;
 	margin: 0;
+	margin-left: 10px;
 
 }
 
@@ -74,9 +84,12 @@ ul{
 	display: inline;
 	float: right;
 	margin: 0;
+	margin-top: 20px;
 }
 
-
+.title p{
+	font-size: 24px;
+}
 
 /* portfolio items */
 
@@ -87,15 +100,24 @@ ul{
 	padding: 100px 10%;
 }
 
+@media screen and (max-width: 600px) {
+  .portfolio{
+	padding-top: 50px;
+}
+}
+
 .projects{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
+	margin-top: 40px;
 }
 
 .project{
 	width: 30%;
 	min-width: 300px;
+	flex-grow: 1;
+	margin: 0 10px 75px;
 
 }
 
@@ -111,18 +133,21 @@ ul{
 	margin-top: 55px;
 	color: black;
 	background-color: white;
-	padding: 100px 10%;
+	padding: 100px 10% 60px;
 }
 
 .team-mates{
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	flex-wrap: wrap-reverse;
 	justify-content: space-between;
 }
 
 .team-mate{
 	width: 30%;
 	min-width: 250px;
+	flex-grow: 1;
+	margin: 0 10px 40px;
 }
 
 .team-mate img{
@@ -135,7 +160,7 @@ footer{
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: flex-end;
-	margin-top: 60px;
-	margin-bottom: 75px;
+	margin-top: 50px;
+	padding-bottom: 20px;
 }
 
